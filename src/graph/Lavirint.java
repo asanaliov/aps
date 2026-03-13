@@ -31,23 +31,23 @@ public class Lavirint {
             }
         }
 
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                if (grid[i][j].equals("#")) continue;
-
-                String currentPos = i + "," + j;
-
-                if (j + 1 < y && !grid[i][j + 1].equals("#")) {
-                    String rightNeighbor = i + "," + (j + 1);
-                    graph.addEdge(currentPos, rightNeighbor);
-                }
-
-                if (i + 1 < x && !grid[i + 1][j].equals("#")) {
-                    String downNeighbor = (i + 1) + "," + j;
-                    graph.addEdge(currentPos, downNeighbor);
-                }
-            }
-        }
+//        for (int i = 0; i < x; i++) {
+//            for (int j = 0; j < y; j++) s {
+//                if (grid[i][j].equals("#")) continue;
+//
+//                String currentPos = i + "," + j;
+//
+//                if (j + 1 < y && !grid[i][j + 1].equals("#")) {
+//                    String rightNeighbor = i + "," + (j + 1);
+//                    graph.addEdge(currentPos, rightNeighbor);
+//                }
+//
+//                if (i + 1 < x && !grid[i + 1][j].equals("#")) {
+//                    String downNeighbor = (i + 1) + "," + j;
+//                    graph.addEdge(currentPos, downNeighbor);
+//                }
+//            }
+//        }
         graph.findPath(startNode, endNode);
     }
 }
